@@ -1,0 +1,45 @@
+version: '3'
+services:
+    nginx:
+        image: nginx:1.15
+        ports:
+            - 80:80
+        volumes:
+            #htmlマウント1 Docker環境を軽く動作テストしたい場合に使う。テスト用phpソースが入っている
+            #- ./source:/usr/share/nginx/html
+            #htmlマウント2 composerでのlaravelダウンロード作業時に使う
+            #- ../:/usr/share/nginx/html
+            #htmlマウント3 laravel適用時
+            - ../laravel:/usr/share/nginx/html
+            
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    php-fpm:
+        build: ./php-fpm
+        volumes:
+            #htmlマウント1 Docker環境を軽く動作テストしたい場合に使う。テスト用phpソースが入っている
+            #- ./source:/var/www/html
+            #htmlマウント2 composerでのlaravelダウンロード作業時に使う
+            #- ../:/var/www/html
+            #htmlマウント3 laravel適用時
+            - ../laravel:/var/www/html
+            
+            # php.iniとログディレクトリ
+            - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
+            - ./php-fpm/log:/var/log
+        ports:
+            # nginxからの接続に必要なポート。接続設定はnginx/default.confに記述
+            - 9000:9000
+            # xdebug用。調整中
+            #- 9012:9012
+    docker_mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: docker_mysql_db
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_USER: docker_mysql_user
+            MYSQL_PASSWORD: password
+            TZ: Asia/Tokyo
+        ports:
+            - 3306:3306
+        volumes:
+            - ./mysql/data:/var/lib/mysql

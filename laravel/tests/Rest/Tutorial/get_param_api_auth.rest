@@ -1,0 +1,2 @@
+GET http://localhost/api/youtube_channel/?api_token=2CU4VMFPgdSbw28R7vqAh3DJLrqBWLEIApQMayWYFEhUXCjjabkFdT3Bba2Z
+Accept: text/json

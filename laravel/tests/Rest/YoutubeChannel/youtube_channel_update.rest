@@ -1,0 +1,8 @@
+POST http://localhost/api/youtube_channel/update
+Accept: text/json
+Authorization: Bearer edpklfKb1hEYaU7ibsFZlfJtOE70JozxW0oF1QEfwkNU1wb0NiptFSieLMk0
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+id=5
+&yc_name=2222222
+&yc_id=3333333333

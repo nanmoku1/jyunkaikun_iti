@@ -1,0 +1,2 @@
+GET https://www.googleapis.com/youtube/v3/videos/?part=statistics,snippet&key=AIzaSyBP1tMnnEaZdkR1cNLu6KLdrMdsNWLyVII&id=z1WK-2ahoE8
+Accept: text/json

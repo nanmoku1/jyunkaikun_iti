@@ -1,0 +1,9 @@
+POST http://localhost/api/youtube_video/
+Accept: text/json
+Authorization: Bearer edpklfKb1hEYaU7ibsFZlfJtOE70JozxW0oF1QEfwkNU1wb0NiptFSieLMk0
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+video_name=1111111
+&explanation=2222222222
+&youtube_video_id=3333333
+&yc_id=444444

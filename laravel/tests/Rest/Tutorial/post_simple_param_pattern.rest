@@ -1,0 +1,7 @@
+POST http://localhost/api/youtube_channel/store
+Accept: text/json
+Authorization: Bearer edpklfKb1hEYaU7ibsFZlfJtOE70JozxW0oF1QEfwkNU1wb0NiptFSieLMk0
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+yc_name=1111111
+&yc_id=2222222222

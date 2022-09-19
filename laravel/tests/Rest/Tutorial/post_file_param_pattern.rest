@@ -1,0 +1,20 @@
+POST http://localhost/api/youtube_channel/store
+Accept: text/json
+Authorization: Bearer edpklfKb1hEYaU7ibsFZlfJtOE70JozxW0oF1QEfwkNU1wb0NiptFSieLMk0
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="yc_name"
+
+311111111111
+--boundary
+Content-Disposition: form-data; name="yc_id"
+
+3222222222222
+--boundary
+Content-Disposition: form-data; name="image_path"; filename="tekitou.txt"
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: binary
+
+< ./test.txt
+--boundary--

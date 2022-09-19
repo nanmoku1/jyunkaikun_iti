@@ -1,0 +1,3 @@
+GET http://localhost/api/youtube_video
+Accept: text/json
+Authorization: Bearer edpklfKb1hEYaU7ibsFZlfJtOE70JozxW0oF1QEfwkNU1wb0NiptFSieLMk0
